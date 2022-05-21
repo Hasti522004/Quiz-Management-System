@@ -9,7 +9,7 @@ class Main_Frame extends Frame
 	MyActionListener ml = new MyActionListener(this);
 	Main_Frame()
 	{
-		super("login");
+		super("Login");
 		setLayout(null);
 		setBounds(0,0,650,650);
 		setBackground(Color.LIGHT_GRAY);
