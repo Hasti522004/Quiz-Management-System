@@ -1,15 +1,15 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-class Main_Frame extends Frame
+
+public class Main_Frame7 extends Frame
 {
-	Label l,l2;
-	JButton b1,b2;
+	JLabel l1;
 	Font f;
-	MyActionListener ml = new MyActionListener(this);
-	Main_Frame()
+	MyActionListener ml1 = new MyActionListener(this);
+	Main_Frame7()
 	{
-		super("login");
+		super("result Page");
 		setLayout(null);
 		setBounds(0,0,650,650);
 		setBackground(Color.LIGHT_GRAY);
@@ -19,7 +19,6 @@ class Main_Frame extends Frame
 		componentSetBound();
 		addfont();
 		addmyactionListener();
-		
 		addWindowListener(new WindowAdapter()
 		{
 			public void windowClosing(WindowEvent w)
@@ -30,37 +29,28 @@ class Main_Frame extends Frame
 	}
 	public void init()
 	{
-		f = new Font("Times",Font.BOLD,16);
-		l = new Label("Welcome to Quiz");
-		b1 = new JButton("Student Login"); 
-		b2 = new JButton("Teacher Login");
+		l1 = new JLabel("Result");
 	}
 	public void addComponenet()
 	{
-		add(l);
-		add(b1);
-		add(b2);
+		add(l1);
 	}
 	public void componentSetBound()
 	{
-		l.setBounds(270,65,250,40);
-		b1.setBounds(200,170,300,50);
-		b2.setBounds(200,250,300,50);
+		l1.setBounds(250,50,100,40);
 	}
 	public void addfont()
 	{
-		l.setFont(f);
-		b1.setFont(f);
-		b2.setFont(f);
+		l1.setFont(new Font("Times",Font.BOLD,20));
 	}
 	public void addmyactionListener()
 	{
-		b1.addActionListener(ml);
-		b2.addActionListener(ml);
 	}
 	public static void main(String s[])
 	{
-		Main_Frame mf = new Main_Frame();
+		Main_Frame7 mf = new Main_Frame7();
 		mf.setVisible(true);
 	}
-}
+} 
+
+

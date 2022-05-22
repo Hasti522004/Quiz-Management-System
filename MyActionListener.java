@@ -4,13 +4,17 @@ import java.io.*;
 import javax.swing.*;
 import java.lang.*;
 import java.util.*;
-public class MyActionListener extends JComponent implements ActionListener
+public class MyActionListener extends JComponent implements ActionListener,ItemListener
 {
 	String s1,s2,s3,s4;
 	Main_Frame mf;
 	Main_Frame1 mf1;
 	Main_Frame2 mf2;
 	Main_Frame3 mf3;
+	Main_Frame4 mf4;
+	Main_Frame5 mf5;
+	Main_Frame6 mf6;
+	Main_Frame7 mf7;
 	MyActionListener(Main_Frame m)
 	{
 		this.mf=m;
@@ -26,6 +30,22 @@ public class MyActionListener extends JComponent implements ActionListener
 	MyActionListener(Main_Frame3 m)
 	{
 		this.mf3=m;
+	}
+	MyActionListener(Main_Frame4 m)
+	{
+		this.mf4=m;
+	}
+	MyActionListener(Main_Frame5 m)
+	{
+		this.mf5=m;
+	}
+	MyActionListener(Main_Frame6 m)
+	{
+		this.mf6=m;
+	}
+	MyActionListener(Main_Frame7 m)
+	{
+		this.mf7=m;
 	}
 	public void actionPerformed(ActionEvent e)
 	{
@@ -108,6 +128,9 @@ public class MyActionListener extends JComponent implements ActionListener
 			mf3.setVisible(false);
 			mf.setVisible(true);
 		}
+	}
+	public void itemStateChanged(ItemEvent it) 
+	{
 	}
 	// public void Button(){}
 	// public void keyPressed(KeyEvent ke)

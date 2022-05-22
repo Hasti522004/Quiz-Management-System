@@ -2,16 +2,15 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Main_Frame4 extends Frame
+public class Main_Frame6 extends Frame
 {
-	JLabel l1,l2,lA,lB,lC,lD,lTime,lTTime;
+	JLabel l1,l2,lTime,lTTime,l3;
 	JButton bSave,bNext,bSubmit;
 	TextArea tque;
-	ButtonGroup bg;
-	JRadioButton r1,r2,r3,r4;
+	TextField tans;
 	Font f;
 	MyActionListener ml1 = new MyActionListener(this);
-	Main_Frame4()
+	Main_Frame6()
 	{
 		super("Quiz Page");
 		setLayout(null);
@@ -23,11 +22,6 @@ public class Main_Frame4 extends Frame
 		componentSetBound();
 		addfont();
 		addmyactionListener();
-		r1.setBackground(Color.LIGHT_GRAY);
-		r2.setBackground(Color.LIGHT_GRAY);
-		r3.setBackground(Color.LIGHT_GRAY);
-		r4.setBackground(Color.LIGHT_GRAY);
-		//lTTime.setBackground(Color.RED);
 		lTTime.setForeground(new Color(255,0,0));
 		addWindowListener(new WindowAdapter()
 		{
@@ -43,42 +37,25 @@ public class Main_Frame4 extends Frame
 		bSave = new JButton("Save");
 		bNext = new JButton("Next");
 		bSubmit = new JButton("Submit Quiz");
-		l2 = new JLabel("Question-1");
+		l2 = new JLabel("Numerical Type ");
 		l1 = new JLabel("Quiz");
+		l3 = new JLabel("Answer :");
 		lTime = new JLabel("Time");
 		lTTime = new JLabel("Time");
-		r1 = new JRadioButton();
-		r2 = new JRadioButton();
-		r3 = new JRadioButton();
-		r4 = new JRadioButton();
-		lA = new JLabel("Option A");
-		lB = new JLabel("Option B");
-		lC = new JLabel("Option C");
-		lD = new JLabel("Option D");
-		bg = new ButtonGroup();
+		tans = new TextField(20);
 		tque = new TextArea("Question TExtArea",10,20,TextArea.SCROLLBARS_VERTICAL_ONLY);
 	}
 	public void addComponenet()
 	{
 		add(l1);
 		add(l2);
+		add(l3);
 		add(lTime);
 		add(lTTime);
 		add(bSave);
 		add(bNext);
 		add(bSubmit);
-		add(r1);
-		add(r2);
-		add(r3);
-		add(r4);
-		bg.add(r1);
-		bg.add(r2);
-		bg.add(r3);
-		bg.add(r4);
-		add(lA);
-		add(lB);
-		add(lC);
-		add(lD);
+		add(tans);
 		add(tque);
 	}
 	public void componentSetBound()
@@ -90,49 +67,33 @@ public class Main_Frame4 extends Frame
 		bSave.setBounds(100,540,100,40);
 		bNext.setBounds(270,540,100,40);
 		bSubmit.setBounds(440,540,150,40);
-		r1.setBounds(70,290,20,40);
-		r2.setBounds(70,350,20,40);
-		r3.setBounds(70,410,20,40);
-		r4.setBounds(70,470,20,40);
-		lA.setBounds(100,290,100,40);
-		lB.setBounds(100,350,100,40);
-		lC.setBounds(100,410,100,40);
-		lD.setBounds(100,470,100,40);
+		tans.setBounds(50,350,200,40);
+		l3.setBounds(50,290,100,40);
 		tque.setBounds(50,180,550,90);
 	}
 	public void addfont()
 	{
 		l1.setFont(new Font("Times",Font.BOLD,20));
 		l2.setFont(f);
+		l3.setFont(f);
 		lTime.setFont(f);
 		lTTime.setFont(f);
 		bSave.setFont(f);
 		bNext.setFont(f);
 		bSubmit.setFont(f);
-		r1.setFont(f);
-		r2.setFont(f);
-		r3.setFont(f);
-		r4.setFont(f);
-		lA.setFont(f);
-		lB.setFont(f);
-		lC.setFont(f);
-		lD.setFont(f);
+		tans.setFont(f);
 		tque.setFont(f);
 	}
 	public void addmyactionListener()
 	{
-		r3.addActionListener(ml1);
-		r4.addActionListener(ml1);
-		r2.addActionListener(ml1);
 		bSave.addActionListener(ml1);
 		bNext.addActionListener(ml1);
 		bSubmit.addActionListener(ml1);
-		r1.addActionListener(ml1);
-		//tque.addItemListener(ml1);
+		tans.addActionListener(ml1);
 	}
 	public static void main(String s[])
 	{
-		Main_Frame4 mf = new Main_Frame4();
+		Main_Frame6 mf = new Main_Frame6();
 		mf.setVisible(true);
 	}
 } 
