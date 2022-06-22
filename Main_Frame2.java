@@ -2,11 +2,11 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Main_Frame2 extends Frame
+public class Main_Frame2 extends JFrame
 {
-	Label l1,l2,l3,l4;
+	Label l1,l2,l3,l4,l5;
 	JButton blogin,bpassword,bregistor,breset;
-	TextField tId,tpassword;
+	TextField tId,tpassword,tsub;
 	Font f;
 	MyActionListener ml1 = new MyActionListener(this);
 	Main_Frame2()
@@ -32,16 +32,18 @@ public class Main_Frame2 extends Frame
 	public void init()
 	{
 		f = new Font("Times",Font.BOLD,16);
-		l1 = new Label("Email ID");
-		l2 = new Label("Passsword");
+		l1 = new Label("Email ID   :");
+		l2 = new Label("Password   :");
 		l3 = new Label("--------- Teacher Login ---------");
 		l4 = new Label("Don't have an Account ?");
+		l5 = new Label("Subject   :");
 		blogin = new JButton("login"); 
 		bpassword = new JButton("Forget Password ?");
-		bregistor = new JButton("Register here");
+		bregistor = new JButton("Register Here");
 		breset = new JButton("Back");
 		tId = new TextField();
 		tpassword = new TextField();
+		tsub = new TextField();
 	}
 	public void addComponenet()
 	{
@@ -49,25 +51,29 @@ public class Main_Frame2 extends Frame
 		add(l2);
 		add(l3);
 		add(l4);
+		add(l5);
 		add(blogin);
 		add(bpassword);
 		add(bregistor);
 		add(breset);
 		add(tId);
 		add(tpassword);
+		add(tsub);
 	}
 	public void componentSetBound()
 	{
-		l1.setBounds(100,195,200,40);
-		l2.setBounds(100,275,200,40);
+		l1.setBounds(100,170,200,40);
+		l2.setBounds(100,230,200,40);
 		l3.setBounds(215,65,250,40);
 		l4.setBounds(100,535,200,40);
+		l5.setBounds(100,290,200,40);
 		blogin.setBounds(100,395,100,40);
 		bpassword.setBounds(220,395,210,40);
 		bregistor.setBounds(350,535,200,40);
 		breset.setBounds(450,395,100,40);
-		tId.setBounds(300,195,250,40);
-		tpassword.setBounds(300,275,250,40);
+		tId.setBounds(300,170,250,40);
+		tpassword.setBounds(300,230,250,40);
+		tsub.setBounds(300,290,250,40);
 	}
 	public void addfont()
 	{
@@ -75,23 +81,24 @@ public class Main_Frame2 extends Frame
 		l2.setFont(f);
 		l3.setFont(f);
 		l4.setFont(f);
+		l5.setFont(f);
 		blogin.setFont(f);
 		bpassword.setFont(f);
 		bregistor.setFont(f);
 		breset.setFont(f);
 		tId.setFont(f);
 		tpassword.setFont(f);
+		tsub.setFont(f);
 	}
 	public void addmyactionListener()
 	{
-		// tId.addKeyListener(ml1);
-		// tpassword.addKeyListener(ml1);
 		blogin.addActionListener(ml1);
 		bpassword.addActionListener(ml1);
 		bregistor.addActionListener(ml1);
 		breset.addActionListener(ml1);
 		tId.addActionListener(ml1);
 		tpassword.addActionListener(ml1);
+		tsub.addActionListener(ml1);
 	}
 	public static void main(String s[])
 	{
@@ -99,9 +106,5 @@ public class Main_Frame2 extends Frame
 		mf.setVisible(true);
 	}
 } 
-//userId
-//password
-//login
-//Forget Password
-//registor
+
 

@@ -11,9 +11,13 @@ public class Main_Frame7 extends Frame
 	{
 		super("result Page");
 		setLayout(null);
+		//setResizable(false);
+		//mf.setExtendedState(mf.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+		//setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setBounds(0,0,650,650);
 		setBackground(Color.LIGHT_GRAY);
 		setLocation(300,0);
+		
 		init();
 		addComponenet();
 		componentSetBound();

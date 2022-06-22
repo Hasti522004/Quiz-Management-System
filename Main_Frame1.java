@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Main_Frame1 extends Frame
+public class Main_Frame1 extends JFrame
 {
 	Label l1,l2,l3,l4;
 	JButton blogin,bpassword,bregistor,breset;
@@ -13,6 +13,9 @@ public class Main_Frame1 extends Frame
 	{
 		super("login");
 		setLayout(null);
+		//setResizable(false);
+		//mf.setExtendedState(mf.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+		//setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setBounds(0,0,650,650);
 		setBackground(Color.LIGHT_GRAY);
 		setLocation(300,0);
@@ -84,7 +87,7 @@ public class Main_Frame1 extends Frame
 		tpassword.setFont(f);
 	}
 	public void addmyactionListener()
-	{
+	{ 
 		// tId.addKeyListener(ml);
 		// tpassword.addKeyListener(ml);
 		blogin.addActionListener(ml);
