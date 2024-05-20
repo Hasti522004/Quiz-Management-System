@@ -31,6 +31,12 @@ The Quiz Management System allows teachers to create and manage quizzes, while s
 - Display of quiz results
 - Teachers can add and update quiz questions
 
+![image](https://github.com/Hasti522004/Quiz-Management-System/assets/93071222/b23b7553-2edd-4674-b4d9-793de287ae22)
+![image](https://github.com/Hasti522004/Quiz-Management-System/assets/93071222/ab06718e-6927-4445-8eed-2f747fbf5f39)
+![image](https://github.com/Hasti522004/Quiz-Management-System/assets/93071222/de707357-1924-4472-a853-db387fbc1f64)
+![image](https://github.com/Hasti522004/Quiz-Management-System/assets/93071222/50dc0570-44de-4e8b-a184-12d079727648)
+![image](https://github.com/Hasti522004/Quiz-Management-System/assets/93071222/889441fc-aaef-4ecf-9f86-2fce06b10257)
+
 
 ## Technology Stack
 - **Frontend:** Java Swing (for GUI)
